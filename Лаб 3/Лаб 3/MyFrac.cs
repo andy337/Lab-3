@@ -60,19 +60,19 @@ namespace Лаб_3
             MyFrac res = new MyFrac(1, 1);
             for (int i = 2; i <= n; i++)
             {
-                res = Multiply(res, Minus(new MyFrac(1, 1), new MyFrac(1, i * i)));
+                rez = Multiply(rez, Minus(new MyFrac(1, 1), new MyFrac(1, i * i)));
             }
-            return res;
+            return rez;
         }
 
         public static MyFrac GetRGR113LeftSum(int n)
         {
-            MyFrac res = new MyFrac(0, 1);
+            MyFrac rez = new MyFrac(0, 1);
             for (int i = 1; i <= n; i++)
             {
-                res = Plus(res, Multiply(new MyFrac(1, (2 * i) - 1), new MyFrac(1, (2 * i) + 1)));
+                rez = Plus(res, Multiply(new MyFrac(1, (2 * i) - 1), new MyFrac(1, (2 * i) + 1)));
             }
-            return res;
+            return rez;
         }
     }
 }
