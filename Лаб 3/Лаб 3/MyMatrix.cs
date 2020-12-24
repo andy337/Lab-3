@@ -151,6 +151,7 @@ namespace Лаб_3
 
         public static MyMatrix operator *(MyMatrix m1, MyMatrix m2)
         {
+            if(m1.Height == m2.Width){
             double[,] array = new double[m1.Height, m2.Width];
             for(int i = 0; i < m1.Height; i++)
             {
@@ -163,6 +164,7 @@ namespace Лаб_3
                     }
                 }
             }
+           }
             return new MyMatrix(array);
         }
 
